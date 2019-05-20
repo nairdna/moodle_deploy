@@ -34,7 +34,7 @@ cd moodle
 git branch --track MOODLE_36_STABLE origin/MOODLE_36_STABLE
 git checkout MOODLE_36_STABLE
 cp -a /opt/moodle/. /var/www/html/
-chmod -R 0755 /var/www/html
+chmod -R 0777 /var/www/html
 echo "Moodle files copied"
 mkdir /var/lmsdata
 chown -R www-data /var/lmsdata
