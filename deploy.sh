@@ -41,3 +41,4 @@ echo "Moodledata mounted"
 cronjob="*/1 * * * * /usr/bin/php  /var/www/html/admin/cli/cron.php >/dev/null"
 (crontab -u www-data -l; echo "$cronjob" ) | crontab -u www-data -
 echo "Ready to go"
+rm /var/www/html/index.html
