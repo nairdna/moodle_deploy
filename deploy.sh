@@ -22,9 +22,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-apt update -y
+apt-get update -y
 echo "Apt update finished"
-apt install apache2 mysql-client php php-fpm libapache2-mod-php graphviz aspell ghostscript clamav php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php-mbstring -y
+apt-get install apache2 mysql-client php php-fpm libapache2-mod-php graphviz aspell ghostscript clamav php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php-mbstring -y
 echo "Dependencies installed"
 service apache2 restart
 echo "Apache2 restarted"
