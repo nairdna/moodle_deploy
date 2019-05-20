@@ -36,7 +36,10 @@ git checkout MOODLE_36_STABLE
 cp -a /opt/moodle/. /var/www/html/
 chmod -R 0755 /var/www/html
 echo "Moodle files copied"
-mount 192.168.0.4:/home/lmsstorageadmin/lmsdata /mnt
+mkdir /var/lmsdata
+chown -R www-data /var/lmsdata
+chmod -R 777 /var/lmsdata
+mount 192.168.0.4:/home/lmsstorageadmin/lmsdata /var/lmsdata
 echo "Moodledata mounted"
 cronjob="*/1 * * * * /usr/bin/php  /var/www/html/admin/cli/cron.php >/dev/null"
 (crontab -u www-data -l; echo "$cronjob" ) | crontab -u www-data -
